@@ -36,7 +36,7 @@ class Counter extends React.Component {
             Class Component: 
           </div>
           <div className="mb">
-            <input type="text" onChange={(e) => this.setName(e.target.value)} />
+            <input type="text" value={this.state.name} onChange={(e) => this.setName(e.target.value)} />
           </div>
           <span className="mr">
               You clicked {this.state.counter} times
