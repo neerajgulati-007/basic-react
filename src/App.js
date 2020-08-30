@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import Counter from './components/useEffect/ClassCounter';
+import Counter from './components/useEffect/HookCounter';
 
 function App() {
   return (
