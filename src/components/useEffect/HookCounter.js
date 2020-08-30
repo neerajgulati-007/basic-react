@@ -4,10 +4,16 @@ const HookCounter = () => {
   const [ count, setCount ] = useState(0);
   const [ name, setName ] = useState('');
 
+  /*
+    - To implement conditional rendering,
+    useEffect takes an array as second parameter
+    The array consists a list of all those params
+    that lead to reexecution of hook.
+  */
   useEffect(() => {
     console.log("Setting title");
     document.title = `Clicked ${count} times`;
-  });
+  }, [count]);
 
   return (
     <div>
