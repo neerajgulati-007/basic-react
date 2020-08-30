@@ -10,6 +10,16 @@ class Counter extends React.Component {
     this.setState({counter: this.state.counter + 1});
   }
 
+  componentDidMount() {
+    // Effect to be implemented: Update title based on the count
+    // In class components we will use CDM, CDU to implement this effect
+    document.title = `Clicked ${this.state.counter} times`;
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    document.title = `Clicked ${this.state.counter} times`;
+  }
+
   render() {
     return (
       <div>
